@@ -1,5 +1,9 @@
+using OpenQA.Selenium;
+using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.Support.UI;
 using System.Diagnostics;
 using System.Net;
+using System.Security.Policy;
 using System.Text;
 
 namespace FFmpeg_Downloader
@@ -9,6 +13,7 @@ namespace FFmpeg_Downloader
         public Form1()
         {
             InitializeComponent();
+            selenium("https://www.google.de/");
             string value = "";
             value = Environment.GetEnvironmentVariable("PATH");
             if (value.Contains("ffmpeg"))
@@ -276,10 +281,78 @@ namespace FFmpeg_Downloader
             else
             {
                 argument = get_link(getSavedHtmlCode(tb_link.Text)) + '"'.ToString() + lbl_speicherpath.Text + "\\" + getfilename(tb_link.Text).Replace("|","") + ".mp4" + '"'.ToString();
+                Debug.WriteLine(argument);
                 download_start(argument);
             }
           }
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(label1.Text == "" || textBox1.Text == "" || textBox2.Text == "")
+            {
+                Console.WriteLine("Sie müssen alles angeben");
+                return;
+            }
+            String argument = get_link(textBox1.Text) + '"'.ToString() + label1.Text + "\\" + textBox2.Text + ".mp4" + '"'.ToString();
+            download_start(argument);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            using (var fbd = new FolderBrowserDialog())
+            {
+                DialogResult result = fbd.ShowDialog();
+                if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
+                {
+                    label1.Text = (fbd.SelectedPath).ToString();
+                }
+            }
+        }
+
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_speicherpath_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+
+        private void selenium(String url)
+        {
+
+            IWebDriver driver = new FirefoxDriver();
+
+            driver.Navigate().GoToUrl(url);
+
+          
+
+            driver.Quit();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
