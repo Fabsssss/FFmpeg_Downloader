@@ -28,444 +28,554 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btn_c = new System.Windows.Forms.Button();
-            this.btn_variable = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btn_command_generiren = new System.Windows.Forms.Button();
-            this.lbl_speicherpath = new System.Windows.Forms.Label();
-            this.btn_speicherort = new System.Windows.Forms.Button();
-            this.tb_link = new System.Windows.Forms.TextBox();
-            this.lbl_path = new System.Windows.Forms.Label();
-            this.btn_file = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.tabPage4.SuspendLayout();
-            this.SuspendLayout();
+            groupBox1 = new GroupBox();
+            btn_c = new Button();
+            btn_variable = new Button();
+            label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
+            groupBox2 = new GroupBox();
+            btn_command_generiren = new Button();
+            lbl_speicherpath = new Label();
+            btn_speicherort = new Button();
+            tb_link = new TextBox();
+            lbl_path = new Label();
+            btn_file = new Button();
+            label7 = new Label();
+            label2 = new Label();
+            tabControl1 = new TabControl();
+            tabPage1 = new TabPage();
+            tabPage2 = new TabPage();
+            tabPage3 = new TabPage();
+            groupBox3 = new GroupBox();
+            textBox2 = new TextBox();
+            label3 = new Label();
+            label1 = new Label();
+            button2 = new Button();
+            button1 = new Button();
+            textBox1 = new TextBox();
+            label9 = new Label();
+            tabPage4 = new TabPage();
+            textBox3 = new TextBox();
+            label12 = new Label();
+            button3 = new Button();
+            label8 = new Label();
+            button4 = new Button();
+            label10 = new Label();
+            button5 = new Button();
+            label11 = new Label();
+            tabPage5 = new TabPage();
+            textBox4 = new TextBox();
+            label13 = new Label();
+            button6 = new Button();
+            label14 = new Label();
+            button7 = new Button();
+            label15 = new Label();
+            groupBox1.SuspendLayout();
+            groupBox2.SuspendLayout();
+            tabControl1.SuspendLayout();
+            tabPage1.SuspendLayout();
+            tabPage2.SuspendLayout();
+            tabPage3.SuspendLayout();
+            groupBox3.SuspendLayout();
+            tabPage4.SuspendLayout();
+            tabPage5.SuspendLayout();
+            SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btn_c);
-            this.groupBox1.Controls.Add(this.btn_variable);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Location = new System.Drawing.Point(6, 6);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(552, 179);
-            this.groupBox1.TabIndex = 13;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "FFMPEG Installieren";
+            groupBox1.Controls.Add(btn_c);
+            groupBox1.Controls.Add(btn_variable);
+            groupBox1.Controls.Add(label6);
+            groupBox1.Controls.Add(label5);
+            groupBox1.Controls.Add(label4);
+            groupBox1.Location = new Point(7, 8);
+            groupBox1.Margin = new Padding(3, 4, 3, 4);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Padding = new Padding(3, 4, 3, 4);
+            groupBox1.Size = new Size(631, 239);
+            groupBox1.TabIndex = 13;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "FFMPEG Installieren";
             // 
             // btn_c
             // 
-            this.btn_c.BackColor = System.Drawing.Color.Red;
-            this.btn_c.Location = new System.Drawing.Point(307, 118);
-            this.btn_c.Name = "btn_c";
-            this.btn_c.Size = new System.Drawing.Size(119, 29);
-            this.btn_c.TabIndex = 10;
-            this.btn_c.Text = "Hinzufügen";
-            this.btn_c.UseVisualStyleBackColor = false;
-            this.btn_c.Click += new System.EventHandler(this.btn_c_Click);
+            btn_c.BackColor = Color.Red;
+            btn_c.Location = new Point(351, 157);
+            btn_c.Margin = new Padding(3, 4, 3, 4);
+            btn_c.Name = "btn_c";
+            btn_c.Size = new Size(136, 39);
+            btn_c.TabIndex = 10;
+            btn_c.Text = "Hinzufügen";
+            btn_c.UseVisualStyleBackColor = false;
+            btn_c.Click += btn_c_Click;
             // 
             // btn_variable
             // 
-            this.btn_variable.BackColor = System.Drawing.Color.Red;
-            this.btn_variable.Location = new System.Drawing.Point(307, 71);
-            this.btn_variable.Name = "btn_variable";
-            this.btn_variable.Size = new System.Drawing.Size(119, 29);
-            this.btn_variable.TabIndex = 9;
-            this.btn_variable.Text = "Hinzufügen";
-            this.btn_variable.UseVisualStyleBackColor = false;
-            this.btn_variable.Click += new System.EventHandler(this.btn_variable_Click);
+            btn_variable.BackColor = Color.Red;
+            btn_variable.Location = new Point(351, 95);
+            btn_variable.Margin = new Padding(3, 4, 3, 4);
+            btn_variable.Name = "btn_variable";
+            btn_variable.Size = new Size(136, 39);
+            btn_variable.TabIndex = 9;
+            btn_variable.Text = "Hinzufügen";
+            btn_variable.UseVisualStyleBackColor = false;
+            btn_variable.Click += btn_variable_Click;
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(17, 125);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(226, 15);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Hinzufügen von FFMPEG in den C Ordner";
+            label6.AutoSize = true;
+            label6.Location = new Point(19, 167);
+            label6.Name = "label6";
+            label6.Size = new Size(278, 20);
+            label6.TabIndex = 8;
+            label6.Text = "Hinzufügen von FFMPEG in den C Ordner";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(17, 78);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(270, 15);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Hinzufügen von FFMPEG zu dem Systemvariablen";
+            label5.AutoSize = true;
+            label5.Location = new Point(19, 104);
+            label5.Name = "label5";
+            label5.Size = new Size(335, 20);
+            label5.TabIndex = 7;
+            label5.Text = "Hinzufügen von FFMPEG zu dem Systemvariablen";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 36);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(508, 15);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Für dieses Programm wird FFMPEG benötigt dafür würde das Programm dies gerne inst" +
-    "allieren ";
+            label4.AutoSize = true;
+            label4.Location = new Point(19, 48);
+            label4.Name = "label4";
+            label4.Size = new Size(637, 20);
+            label4.TabIndex = 6;
+            label4.Text = "Für dieses Programm wird FFMPEG benötigt dafür würde das Programm dies gerne installieren ";
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.btn_command_generiren);
-            this.groupBox2.Controls.Add(this.lbl_speicherpath);
-            this.groupBox2.Controls.Add(this.btn_speicherort);
-            this.groupBox2.Controls.Add(this.tb_link);
-            this.groupBox2.Controls.Add(this.lbl_path);
-            this.groupBox2.Controls.Add(this.btn_file);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Location = new System.Drawing.Point(3, 6);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(841, 310);
-            this.groupBox2.TabIndex = 14;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Download Link Erstellen";
+            groupBox2.Controls.Add(btn_command_generiren);
+            groupBox2.Controls.Add(lbl_speicherpath);
+            groupBox2.Controls.Add(btn_speicherort);
+            groupBox2.Controls.Add(tb_link);
+            groupBox2.Controls.Add(lbl_path);
+            groupBox2.Controls.Add(btn_file);
+            groupBox2.Controls.Add(label7);
+            groupBox2.Controls.Add(label2);
+            groupBox2.Location = new Point(3, 8);
+            groupBox2.Margin = new Padding(3, 4, 3, 4);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Padding = new Padding(3, 4, 3, 4);
+            groupBox2.Size = new Size(961, 413);
+            groupBox2.TabIndex = 14;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Download Link Erstellen";
             // 
             // btn_command_generiren
             // 
-            this.btn_command_generiren.Location = new System.Drawing.Point(17, 212);
-            this.btn_command_generiren.Name = "btn_command_generiren";
-            this.btn_command_generiren.Size = new System.Drawing.Size(809, 84);
-            this.btn_command_generiren.TabIndex = 16;
-            this.btn_command_generiren.Text = "Downloaden";
-            this.btn_command_generiren.UseVisualStyleBackColor = true;
-            this.btn_command_generiren.Click += new System.EventHandler(this.btn_command_generiren_Click);
+            btn_command_generiren.Location = new Point(19, 283);
+            btn_command_generiren.Margin = new Padding(3, 4, 3, 4);
+            btn_command_generiren.Name = "btn_command_generiren";
+            btn_command_generiren.Size = new Size(925, 112);
+            btn_command_generiren.TabIndex = 16;
+            btn_command_generiren.Text = "Downloaden";
+            btn_command_generiren.UseVisualStyleBackColor = true;
+            btn_command_generiren.Click += btn_command_generiren_Click;
             // 
             // lbl_speicherpath
             // 
-            this.lbl_speicherpath.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl_speicherpath.Location = new System.Drawing.Point(213, 72);
-            this.lbl_speicherpath.Name = "lbl_speicherpath";
-            this.lbl_speicherpath.Size = new System.Drawing.Size(613, 21);
-            this.lbl_speicherpath.TabIndex = 15;
-            this.lbl_speicherpath.Text = "Path";
-            this.lbl_speicherpath.Click += new System.EventHandler(this.lbl_speicherpath_Click);
+            lbl_speicherpath.BackColor = SystemColors.ButtonHighlight;
+            lbl_speicherpath.Location = new Point(243, 96);
+            lbl_speicherpath.Name = "lbl_speicherpath";
+            lbl_speicherpath.Size = new Size(701, 28);
+            lbl_speicherpath.TabIndex = 15;
+            lbl_speicherpath.Text = "Path";
+            lbl_speicherpath.Click += lbl_speicherpath_Click;
             // 
             // btn_speicherort
             // 
-            this.btn_speicherort.Location = new System.Drawing.Point(17, 64);
-            this.btn_speicherort.Name = "btn_speicherort";
-            this.btn_speicherort.Size = new System.Drawing.Size(190, 31);
-            this.btn_speicherort.TabIndex = 14;
-            this.btn_speicherort.Text = "Speicherort aussuchen";
-            this.btn_speicherort.UseVisualStyleBackColor = true;
-            this.btn_speicherort.Click += new System.EventHandler(this.btn_speicherort_Click);
+            btn_speicherort.Location = new Point(19, 85);
+            btn_speicherort.Margin = new Padding(3, 4, 3, 4);
+            btn_speicherort.Name = "btn_speicherort";
+            btn_speicherort.Size = new Size(217, 41);
+            btn_speicherort.TabIndex = 14;
+            btn_speicherort.Text = "Speicherort aussuchen";
+            btn_speicherort.UseVisualStyleBackColor = true;
+            btn_speicherort.Click += btn_speicherort_Click;
             // 
             // tb_link
             // 
-            this.tb_link.Location = new System.Drawing.Point(160, 35);
-            this.tb_link.Name = "tb_link";
-            this.tb_link.Size = new System.Drawing.Size(670, 23);
-            this.tb_link.TabIndex = 13;
-            this.tb_link.TextChanged += new System.EventHandler(this.tb_link_TextChanged);
+            tb_link.Location = new Point(183, 47);
+            tb_link.Margin = new Padding(3, 4, 3, 4);
+            tb_link.Name = "tb_link";
+            tb_link.Size = new Size(765, 27);
+            tb_link.TabIndex = 13;
+            tb_link.TextChanged += tb_link_TextChanged;
             // 
             // lbl_path
             // 
-            this.lbl_path.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl_path.Location = new System.Drawing.Point(375, 173);
-            this.lbl_path.Name = "lbl_path";
-            this.lbl_path.Size = new System.Drawing.Size(447, 21);
-            this.lbl_path.TabIndex = 12;
-            this.lbl_path.Text = "Path";
+            lbl_path.BackColor = SystemColors.ButtonHighlight;
+            lbl_path.Location = new Point(429, 231);
+            lbl_path.Name = "lbl_path";
+            lbl_path.Size = new Size(511, 28);
+            lbl_path.TabIndex = 12;
+            lbl_path.Text = "Path";
             // 
             // btn_file
             // 
-            this.btn_file.Location = new System.Drawing.Point(250, 166);
-            this.btn_file.Name = "btn_file";
-            this.btn_file.Size = new System.Drawing.Size(119, 28);
-            this.btn_file.TabIndex = 11;
-            this.btn_file.Text = "Datei aussuchen";
-            this.btn_file.UseVisualStyleBackColor = true;
-            this.btn_file.Click += new System.EventHandler(this.btn_file_Click);
+            btn_file.Location = new Point(286, 221);
+            btn_file.Margin = new Padding(3, 4, 3, 4);
+            btn_file.Name = "btn_file";
+            btn_file.Size = new Size(136, 37);
+            btn_file.TabIndex = 11;
+            btn_file.Text = "Datei aussuchen";
+            btn_file.UseVisualStyleBackColor = true;
+            btn_file.Click += btn_file_Click;
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(13, 173);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(231, 15);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "Oder txt Datei mit mehrern Links angeben:";
+            label7.AutoSize = true;
+            label7.Location = new Point(15, 231);
+            label7.Name = "label7";
+            label7.Size = new Size(289, 20);
+            label7.TabIndex = 10;
+            label7.Text = "Oder txt Datei mit mehrern Links angeben:";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(21, 38);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(133, 15);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Bitte VOE Link angeben:";
+            label2.AutoSize = true;
+            label2.Location = new Point(24, 51);
+            label2.Name = "label2";
+            label2.Size = new Size(167, 20);
+            label2.TabIndex = 9;
+            label2.Text = "Bitte VOE Link angeben:";
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Location = new System.Drawing.Point(12, 12);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(870, 355);
-            this.tabControl1.TabIndex = 15;
+            tabControl1.Controls.Add(tabPage1);
+            tabControl1.Controls.Add(tabPage2);
+            tabControl1.Controls.Add(tabPage3);
+            tabControl1.Controls.Add(tabPage4);
+            tabControl1.Controls.Add(tabPage5);
+            tabControl1.Location = new Point(14, 16);
+            tabControl1.Margin = new Padding(3, 4, 3, 4);
+            tabControl1.Name = "tabControl1";
+            tabControl1.SelectedIndex = 0;
+            tabControl1.Size = new Size(994, 473);
+            tabControl1.TabIndex = 15;
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.groupBox2);
-            this.tabPage1.Location = new System.Drawing.Point(4, 24);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(862, 327);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            tabPage1.Controls.Add(groupBox2);
+            tabPage1.Location = new Point(4, 29);
+            tabPage1.Margin = new Padding(3, 4, 3, 4);
+            tabPage1.Name = "tabPage1";
+            tabPage1.Padding = new Padding(3, 4, 3, 4);
+            tabPage1.Size = new Size(986, 440);
+            tabPage1.TabIndex = 0;
+            tabPage1.Text = "tabPage1";
+            tabPage1.UseVisualStyleBackColor = true;
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.groupBox1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 24);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(862, 327);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            tabPage2.Controls.Add(groupBox1);
+            tabPage2.Location = new Point(4, 29);
+            tabPage2.Margin = new Padding(3, 4, 3, 4);
+            tabPage2.Name = "tabPage2";
+            tabPage2.Padding = new Padding(3, 4, 3, 4);
+            tabPage2.Size = new Size(986, 440);
+            tabPage2.TabIndex = 1;
+            tabPage2.Text = "tabPage2";
+            tabPage2.UseVisualStyleBackColor = true;
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.groupBox3);
-            this.tabPage3.Location = new System.Drawing.Point(4, 24);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(862, 327);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "tabPage3";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            tabPage3.Controls.Add(groupBox3);
+            tabPage3.Location = new Point(4, 29);
+            tabPage3.Margin = new Padding(3, 4, 3, 4);
+            tabPage3.Name = "tabPage3";
+            tabPage3.Size = new Size(986, 440);
+            tabPage3.TabIndex = 2;
+            tabPage3.Text = "tabPage3";
+            tabPage3.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.textBox2);
-            this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Controls.Add(this.label1);
-            this.groupBox3.Controls.Add(this.button2);
-            this.groupBox3.Controls.Add(this.button1);
-            this.groupBox3.Controls.Add(this.textBox1);
-            this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Location = new System.Drawing.Point(11, 8);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(841, 310);
-            this.groupBox3.TabIndex = 15;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Download Link Erstellen";
-            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
+            groupBox3.Controls.Add(textBox2);
+            groupBox3.Controls.Add(label3);
+            groupBox3.Controls.Add(label1);
+            groupBox3.Controls.Add(button2);
+            groupBox3.Controls.Add(button1);
+            groupBox3.Controls.Add(textBox1);
+            groupBox3.Controls.Add(label9);
+            groupBox3.Location = new Point(13, 11);
+            groupBox3.Margin = new Padding(3, 4, 3, 4);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Padding = new Padding(3, 4, 3, 4);
+            groupBox3.Size = new Size(961, 413);
+            groupBox3.TabIndex = 15;
+            groupBox3.TabStop = false;
+            groupBox3.Text = "Download Link Erstellen";
+            groupBox3.Enter += groupBox3_Enter;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(6, 101);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(670, 23);
-            this.textBox2.TabIndex = 20;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            textBox2.Location = new Point(7, 135);
+            textBox2.Margin = new Padding(3, 4, 3, 4);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(765, 27);
+            textBox2.TabIndex = 20;
+            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 83);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 15);
-            this.label3.TabIndex = 19;
-            this.label3.Text = "Namen";
+            label3.AutoSize = true;
+            label3.Location = new Point(7, 111);
+            label3.Name = "label3";
+            label3.Size = new Size(57, 20);
+            label3.TabIndex = 19;
+            label3.Text = "Namen";
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(202, 160);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(613, 21);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Path";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            label1.BackColor = SystemColors.ButtonHighlight;
+            label1.Location = new Point(231, 213);
+            label1.Name = "label1";
+            label1.Size = new Size(701, 28);
+            label1.TabIndex = 18;
+            label1.Text = "Path";
+            label1.Click += label1_Click;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(6, 152);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(190, 31);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "Speicherort aussuchen";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            button2.Location = new Point(7, 203);
+            button2.Margin = new Padding(3, 4, 3, 4);
+            button2.Name = "button2";
+            button2.Size = new Size(217, 41);
+            button2.TabIndex = 17;
+            button2.Text = "Speicherort aussuchen";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(6, 201);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(809, 84);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Downloaden";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            button1.Location = new Point(7, 268);
+            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Name = "button1";
+            button1.Size = new Size(925, 112);
+            button1.TabIndex = 16;
+            button1.Text = "Downloaden";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(6, 48);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(670, 23);
-            this.textBox1.TabIndex = 13;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            textBox1.Location = new Point(7, 64);
+            textBox1.Margin = new Padding(3, 4, 3, 4);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(765, 27);
+            textBox1.TabIndex = 13;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 19);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(165, 15);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "Bitte Download Link angeben:";
+            label9.AutoSize = true;
+            label9.Location = new Point(7, 25);
+            label9.Name = "label9";
+            label9.Size = new Size(208, 20);
+            label9.TabIndex = 9;
+            label9.Text = "Bitte Download Link angeben:";
             // 
             // tabPage4
             // 
-            this.tabPage4.Controls.Add(this.textBox3);
-            this.tabPage4.Controls.Add(this.label12);
-            this.tabPage4.Controls.Add(this.button3);
-            this.tabPage4.Controls.Add(this.label8);
-            this.tabPage4.Controls.Add(this.button4);
-            this.tabPage4.Controls.Add(this.label10);
-            this.tabPage4.Controls.Add(this.button5);
-            this.tabPage4.Controls.Add(this.label11);
-            this.tabPage4.Location = new System.Drawing.Point(4, 24);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(862, 327);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "tabPage4";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            tabPage4.Controls.Add(textBox3);
+            tabPage4.Controls.Add(label12);
+            tabPage4.Controls.Add(button3);
+            tabPage4.Controls.Add(label8);
+            tabPage4.Controls.Add(button4);
+            tabPage4.Controls.Add(label10);
+            tabPage4.Controls.Add(button5);
+            tabPage4.Controls.Add(label11);
+            tabPage4.Location = new Point(4, 29);
+            tabPage4.Margin = new Padding(3, 4, 3, 4);
+            tabPage4.Name = "tabPage4";
+            tabPage4.Size = new Size(986, 440);
+            tabPage4.TabIndex = 3;
+            tabPage4.Text = "tabPage4";
+            tabPage4.UseVisualStyleBackColor = true;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(29, 99);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(670, 23);
-            this.textBox3.TabIndex = 24;
+            textBox3.Location = new Point(33, 132);
+            textBox3.Margin = new Padding(3, 4, 3, 4);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(765, 27);
+            textBox3.TabIndex = 24;
             // 
             // label12
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(29, 81);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(46, 15);
-            this.label12.TabIndex = 23;
-            this.label12.Text = "Namen";
+            label12.AutoSize = true;
+            label12.Location = new Point(33, 108);
+            label12.Name = "label12";
+            label12.Size = new Size(57, 20);
+            label12.TabIndex = 23;
+            label12.Text = "Namen";
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(29, 195);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(809, 84);
-            this.button3.TabIndex = 22;
-            this.button3.Text = "Downloaden";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            button3.Location = new Point(33, 260);
+            button3.Margin = new Padding(3, 4, 3, 4);
+            button3.Name = "button3";
+            button3.Size = new Size(925, 112);
+            button3.TabIndex = 22;
+            button3.Text = "Downloaden";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // label8
             // 
-            this.label8.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(225, 55);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(613, 21);
-            this.label8.TabIndex = 21;
-            this.label8.Text = "Path";
+            label8.BackColor = SystemColors.ButtonHighlight;
+            label8.Location = new Point(257, 73);
+            label8.Name = "label8";
+            label8.Size = new Size(701, 28);
+            label8.TabIndex = 21;
+            label8.Text = "Path";
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(29, 47);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(190, 31);
-            this.button4.TabIndex = 20;
-            this.button4.Text = "Speicherort aussuchen";
-            this.button4.UseVisualStyleBackColor = true;
+            button4.Location = new Point(33, 63);
+            button4.Margin = new Padding(3, 4, 3, 4);
+            button4.Name = "button4";
+            button4.Size = new Size(217, 41);
+            button4.TabIndex = 20;
+            button4.Text = "Speicherort aussuchen";
+            button4.UseVisualStyleBackColor = true;
             // 
             // label10
             // 
-            this.label10.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label10.Location = new System.Drawing.Point(387, 156);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(447, 21);
-            this.label10.TabIndex = 19;
-            this.label10.Text = "Path";
+            label10.BackColor = SystemColors.ButtonHighlight;
+            label10.Location = new Point(442, 208);
+            label10.Name = "label10";
+            label10.Size = new Size(511, 28);
+            label10.TabIndex = 19;
+            label10.Text = "Path";
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(262, 149);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(119, 28);
-            this.button5.TabIndex = 18;
-            this.button5.Text = "Datei aussuchen";
-            this.button5.UseVisualStyleBackColor = true;
+            button5.Location = new Point(299, 199);
+            button5.Margin = new Padding(3, 4, 3, 4);
+            button5.Name = "button5";
+            button5.Size = new Size(136, 37);
+            button5.TabIndex = 18;
+            button5.Text = "Datei aussuchen";
+            button5.UseVisualStyleBackColor = true;
             // 
             // label11
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(25, 156);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(231, 15);
-            this.label11.TabIndex = 17;
-            this.label11.Text = "Oder txt Datei mit mehrern Links angeben:";
+            label11.AutoSize = true;
+            label11.Location = new Point(29, 208);
+            label11.Name = "label11";
+            label11.Size = new Size(289, 20);
+            label11.TabIndex = 17;
+            label11.Text = "Oder txt Datei mit mehrern Links angeben:";
+            // 
+            // tabPage5
+            // 
+            tabPage5.Controls.Add(textBox4);
+            tabPage5.Controls.Add(label13);
+            tabPage5.Controls.Add(button6);
+            tabPage5.Controls.Add(label14);
+            tabPage5.Controls.Add(button7);
+            tabPage5.Controls.Add(label15);
+            tabPage5.Location = new Point(4, 29);
+            tabPage5.Name = "tabPage5";
+            tabPage5.Size = new Size(986, 440);
+            tabPage5.TabIndex = 4;
+            tabPage5.Text = "tabPage5";
+            tabPage5.UseVisualStyleBackColor = true;
+            tabPage5.Click += tabPage5_Click;
+            // 
+            // textBox4
+            // 
+            textBox4.Location = new Point(33, 83);
+            textBox4.Margin = new Padding(3, 4, 3, 4);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(765, 27);
+            textBox4.TabIndex = 30;
+            textBox4.TextChanged += textBox4_TextChanged;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Location = new Point(33, 59);
+            label13.Name = "label13";
+            label13.Size = new Size(99, 20);
+            label13.TabIndex = 29;
+            label13.Text = "Aniworld Link";
+            // 
+            // button6
+            // 
+            button6.Location = new Point(33, 262);
+            button6.Margin = new Padding(3, 4, 3, 4);
+            button6.Name = "button6";
+            button6.Size = new Size(925, 112);
+            button6.TabIndex = 28;
+            button6.Text = "Get Links";
+            button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
+            // 
+            // label14
+            // 
+            label14.BackColor = SystemColors.ButtonHighlight;
+            label14.Location = new Point(175, 208);
+            label14.Name = "label14";
+            label14.Size = new Size(511, 28);
+            label14.TabIndex = 27;
+            label14.Text = "Path";
+            label14.Click += label14_Click;
+            // 
+            // button7
+            // 
+            button7.Location = new Point(33, 199);
+            button7.Margin = new Padding(3, 4, 3, 4);
+            button7.Name = "button7";
+            button7.Size = new Size(136, 37);
+            button7.TabIndex = 26;
+            button7.Text = "Datei aussuchen";
+            button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Location = new Point(29, 159);
+            label15.Name = "label15";
+            label15.Size = new Size(88, 20);
+            label15.TabIndex = 25;
+            label15.Text = "Speicherort:";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(897, 385);
-            this.Controls.Add(this.tabControl1);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1025, 513);
+            Controls.Add(tabControl1);
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "Form1";
+            Text = "Form1";
+            Load += Form1_Load;
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
+            tabControl1.ResumeLayout(false);
+            tabPage1.ResumeLayout(false);
+            tabPage2.ResumeLayout(false);
+            tabPage3.ResumeLayout(false);
+            groupBox3.ResumeLayout(false);
+            groupBox3.PerformLayout();
+            tabPage4.ResumeLayout(false);
+            tabPage4.PerformLayout();
+            tabPage5.ResumeLayout(false);
+            tabPage5.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion
@@ -506,5 +616,12 @@
         private Label label10;
         private Button button5;
         private Label label11;
+        private TabPage tabPage5;
+        private TextBox textBox4;
+        private Label label13;
+        private Button button6;
+        private Label label14;
+        private Button button7;
+        private Label label15;
     }
 }

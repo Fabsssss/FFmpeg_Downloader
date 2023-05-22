@@ -1,10 +1,13 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
+using System;
 using System.Diagnostics;
 using System.Net;
 using System.Security.Policy;
 using System.Text;
+using System.Xml.Linq;
 
 namespace FFmpeg_Downloader
 {
@@ -13,7 +16,9 @@ namespace FFmpeg_Downloader
         public Form1()
         {
             InitializeComponent();
-            selenium("https://www.google.de/");
+            textBox4.Text = "https://aniworld.to/anime/stream/one-piece/staffel-1/episode-1";
+            label14.Text = "C:\\Users\\fabs\\Desktop\\englisch";
+            button6_Click(null,null);
             string value = "";
             value = Environment.GetEnvironmentVariable("PATH");
             if (value.Contains("ffmpeg"))
@@ -28,7 +33,7 @@ namespace FFmpeg_Downloader
 
         public static string get_link(string url)
         {
-            string befehl = " -i "+ '"'.ToString() + url + '"'.ToString()+" -bsf:a aac_adtstoasc -vcodec copy -c copy -crf 50 ";
+            string befehl = " -i " + '"'.ToString() + url + '"'.ToString() + " -bsf:a aac_adtstoasc -vcodec copy -c copy -crf 50 ";
             return befehl;
         }
 
@@ -87,7 +92,7 @@ namespace FFmpeg_Downloader
             psi.UseShellExecute = false;
             psi.FileName = "ffmpeg.exe";
             psi.WindowStyle = ProcessWindowStyle.Hidden;
-            psi.Arguments = argument; 
+            psi.Arguments = argument;
             using (Process ep = Process.Start(psi))
             {
                 ep.WaitForExit();
@@ -100,7 +105,7 @@ namespace FFmpeg_Downloader
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           
+
             //tb_generieter_link.Text = getfilename(tb_link.Text);
         }
 
@@ -133,7 +138,7 @@ namespace FFmpeg_Downloader
                 MessageBox.Show("Fehler aufgetreten 3");
                 return html;
             }
-            
+
             return html;
         }
 
@@ -173,7 +178,7 @@ namespace FFmpeg_Downloader
             {
                 Environment.SetEnvironmentVariable("PATH", value + ";C:\\ffmpeg\\bin", EnvironmentVariableTarget.User);
                 value = Environment.GetEnvironmentVariable("PATH");
-                if (value.Contains("ffmpeg")) 
+                if (value.Contains("ffmpeg"))
                 {
                     btn_variable.BackColor = Color.Green;
                 }
@@ -231,7 +236,7 @@ namespace FFmpeg_Downloader
                     lbl_speicherpath.Text = Path.GetDirectoryName(openFileDialog.FileName);
                 }
             }
-            
+
             //foreach (string line in System.IO.File.ReadLines(@"c:\test.txt"))
             //{
             //    System.Console.WriteLine(line);
@@ -260,7 +265,7 @@ namespace FFmpeg_Downloader
         private void btn_command_generiren_Click(object sender, EventArgs e)
         {
             string argument = "";
-            if((tb_link.Text == "" &&lbl_path.Text == "Path") || lbl_speicherpath.Text == "Path")
+            if ((tb_link.Text == "" && lbl_path.Text == "Path") || lbl_speicherpath.Text == "Path")
             {
                 MessageBox.Show("Sie müssen alle Daten angeben");
                 return;
@@ -270,21 +275,21 @@ namespace FFmpeg_Downloader
                 foreach (string line in System.IO.File.ReadLines(lbl_path.Text))
                 {
                     string getet_link = get_link(getSavedHtmlCode(line));
-                    if(!(getet_link.Contains('<') && getet_link.Contains('>')) && getet_link != "")
+                    if (!(getet_link.Contains('<') && getet_link.Contains('>')) && getet_link != "")
                     {
                         argument = get_link(getSavedHtmlCode(line)) + '"'.ToString() + lbl_speicherpath.Text + "\\" + getfilename(line).Replace("|", "") + ".mp4" + '"'.ToString();
                         download_start(argument);
                     }
                 }
-                
+
             }
             else
             {
-                argument = get_link(getSavedHtmlCode(tb_link.Text)) + '"'.ToString() + lbl_speicherpath.Text + "\\" + getfilename(tb_link.Text).Replace("|","") + ".mp4" + '"'.ToString();
+                argument = get_link(getSavedHtmlCode(tb_link.Text)) + '"'.ToString() + lbl_speicherpath.Text + "\\" + getfilename(tb_link.Text).Replace("|", "") + ".mp4" + '"'.ToString();
                 Debug.WriteLine(argument);
                 download_start(argument);
             }
-          }
+        }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -293,7 +298,7 @@ namespace FFmpeg_Downloader
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(label1.Text == "" || textBox1.Text == "" || textBox2.Text == "")
+            if (label1.Text == "" || textBox1.Text == "" || textBox2.Text == "")
             {
                 Console.WriteLine("Sie müssen alles angeben");
                 return;
@@ -338,19 +343,180 @@ namespace FFmpeg_Downloader
 
 
 
-        private void selenium(String url)
-        {
-
-            IWebDriver driver = new FirefoxDriver();
-
-            driver.Navigate().GoToUrl(url);
-
-          
-
-            driver.Quit();
-        }
+  
 
         private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+
+
+
+
+
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (textBox4.Text == "" || label4.Text == "")
+            {
+                MessageBox.Show("es fehl etwas");
+                return;
+            }
+            IWebDriver driver = new FirefoxDriver();
+            driver.Manage().Window.Maximize();
+            driver.Navigate().GoToUrl(textBox4.Text);
+
+
+
+            //IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
+            //js.ExecuteScript("window.scrollTo(0, 800);");
+            //Actions actions = new Actions(driver);
+            //MessageBox.Show("");
+            //IWebElement element = driver.FindElement(By.XPath("/html/body/div/div[2]/div[2]/div[3]/div[5]/div[1]/div/img[1]"));
+            //// Perform the click action at the specified coordinates relative to the element
+            //actions.MoveToElement(element).MoveByOffset(0, 300).Click().Perform();
+
+            ////IJavaScriptExecutor jsExecutor = (IJavaScriptExecutor)driver;
+            ////long viewportWidth = (long)jsExecutor.ExecuteScript("return window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;");
+            ////long viewportHeight = (long)jsExecutor.ExecuteScript("return window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;");
+            ////long middleX = viewportWidth / 2;
+            ////long middleY = viewportHeight / 2;
+
+            ////// Perform the click in the middle of the page
+            ////jsExecutor.ExecuteScript($"window.scrollTo({middleX}, {middleY});");
+            ////jsExecutor.ExecuteScript("document.elementFromPoint(arguments[0], arguments[1]).click();", middleX, middleY);
+            //Thread.Sleep(1000);
+
+            //// Close all other tabs except the current tab
+            //string currentWindowHandle = driver.CurrentWindowHandle;
+            //foreach (string windowHandle in driver.WindowHandles)
+            //{
+            //    if (windowHandle != currentWindowHandle)
+            //    {
+            //        driver.SwitchTo().Window(windowHandle);
+
+            //        // Check if the window is still available
+            //        if (driver.WindowHandles.Contains(windowHandle))
+            //        {
+            //            driver.Close();
+            //        }
+            //    }
+            //}
+
+            //// Switch back to the current tab
+            //driver.SwitchTo().Window(currentWindowHandle);
+            //MessageBox.Show("");
+
+            //actions.MoveToElement(element).MoveByOffset(0, 200).Click().Perform();
+            //Thread.Sleep(5000);
+            Robot robot = new Robot();
+            robot.keyPress(KeyEvent.VK_F12);
+            robot.keyRelease(KeyEvent.VK_F12);
+            IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
+            js.ExecuteScript("window.scrollTo(0, 800);");
+            IWebElement button = driver.FindElement(By.XPath("/html/body/div/div[2]/div[2]/div[3]/div[3]/h2/span"));
+            Actions actions = new Actions(driver);
+            actions.Click(button).Perform();
+            gotomaintab(driver);
+            actions.Click(button).Perform();
+            gotomaintab(driver);
+            actions.Click(button).Perform();
+            gotomaintab(driver);
+            actions.Click(button).Perform();
+            gotomaintab(driver);
+            IJavaScriptExecutor jsExecutor = (IJavaScriptExecutor)driver;
+            
+            actions.SendKeys(OpenQA.Selenium.Keys.F12).Perform();
+            //while (!hasLINK(driver))
+            //{
+            //    actions.MoveToElement(button).MoveByOffset(0, 200).Click().Perform();
+            //    gotomaintab(driver);
+            //}
+
+
+
+            Thread.Sleep(3000);
+            
+
+            driver.Quit();
+
+
+
+           
+
+        }
+        private bool hasLINK(IWebDriver driver)
+        {
+            string htmlCode = driver.PageSource;
+            MessageBox.Show(htmlCode);
+            string[] splitParts = htmlCode.Split("hls");
+            if (splitParts.Length > 1)
+            {
+                MessageBox.Show(splitParts[1]);
+                return true;
+            }
+            foreach (string part in splitParts)
+            {
+                Debug.WriteLine(part);
+                Debug.Write("zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
+            }
+            return false;
+        }
+
+        private void gotomaintab(IWebDriver driver)
+        {
+          
+            string currentWindowHandle = driver.CurrentWindowHandle;
+            foreach (string windowHandle in driver.WindowHandles)
+            {
+                if (windowHandle != currentWindowHandle)
+                {
+                    driver.SwitchTo().Window(windowHandle);
+
+                     
+                    if (driver.WindowHandles.Contains(windowHandle))
+                    {
+                        driver.Close();
+                    }
+                }
+            }
+
+            
+            driver.SwitchTo().Window(currentWindowHandle);
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            using (var fbd = new FolderBrowserDialog())
+            {
+                DialogResult result = fbd.ShowDialog();
+                if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
+                {
+                    label14.Text = (fbd.SelectedPath).ToString();
+                }
+            }
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+
+
+
+
+        private void tabPage5_Click(object sender, EventArgs e)
         {
 
         }
